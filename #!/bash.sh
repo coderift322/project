@@ -4,7 +4,7 @@ auth="coderift"
 
 while [ "$start_date" != "$end_date" ]; do
     echo "Commit on $start_date" >> fakefile.txt
-    git add .
+    git add fakefile.txt
     GIT_COMMITTER_DATE="$start_date 12:00:00" GIT_AUTHOR_DATE="$start_date 12:00:00" git commit -m "commit for $start_date by $auth"
     start_date=$(date -I -d "$start_date + 1 day")
 done
