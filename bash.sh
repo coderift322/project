@@ -1,6 +1,6 @@
 # Set start and end dates
-START_DATE="2018-01-01"
-END_DATE="2023-12-31"
+START_DATE="2018-10-31"
+END_DATE="2023-12-29"
 
 # Loop through each day from START_DATE to END_DATE
 while [ "$(date -d "$START_DATE" +%Y-%m-%d)" != "$(date -d "$END_DATE + 1 day" +%Y-%m-%d)" ]; do
